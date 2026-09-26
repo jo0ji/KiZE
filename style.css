@@ -8,15 +8,16 @@
 body {
     /* Sophisticated, clean sans-serif font */
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #000000;
+    background-color: #0a0a0a; /* Slightly lighter than pure black for depth */
+    border-bottom: 1px solid #333333;
     position: fixed;
     top: 0;
     width: 100%;
@@ -35,6 +36,99 @@ body {
 
 .nav-links a {
     color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #aaaaaa;
+}
+
+/* Main Layout */
+main {
+    margin-top: 70px; /* Prevents content from hiding behind the fixed navbar */
+    padding: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-container {
+    padding: 5rem 0;
+    border-bottom: 1px solid #333333; /* Dark grey divider lines */
+}
+
+.section-container:last-child {
+    border-bottom: none;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff; /* White border to stand out against black background */
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+/* Paragraph spacing and color */
+.about-text p {
+    font-size: 1.1rem;
+    color: #dddddd; /* Off-white for easier reading */
+    margin-bottom: 1.2rem; 
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Outcomes Sections */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.evidence {
+    font-style: italic;
+    color: #999999;
+    font-size: 1.05rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .section-container {
+        padding: 3rem 0;
+    }
+}    color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.85rem;
