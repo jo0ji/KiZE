@@ -28,7 +28,9 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
 }
 
 .nav-links a {
@@ -85,9 +87,15 @@ h1 {
     letter-spacing: -0.5px;
 }
 
+/* Updated spacing for multiple paragraphs */
 .about-text p {
     font-size: 1.1rem;
     color: #333333;
+    margin-bottom: 1.2rem; 
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* Outcomes Sections */
@@ -113,9 +121,7 @@ h2 {
     }
 
     .nav-links {
-        flex-wrap: wrap;
         gap: 1rem;
-        padding: 0 1rem;
     }
 
     .section-container {
