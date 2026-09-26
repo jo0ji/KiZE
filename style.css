@@ -1,0 +1,124 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Sophisticated, clean sans-serif font */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #999999;
+}
+
+/* Main Layout */
+main {
+    margin-top: 70px; /* Prevents content from hiding behind the fixed navbar */
+    padding: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-container {
+    padding: 5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-container:last-child {
+    border-bottom: none;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000000;
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+/* Outcomes Sections */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.evidence {
+    font-style: italic;
+    color: #666666;
+    font-size: 1.05rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .section-container {
+        padding: 3rem 0;
+    }
+}
